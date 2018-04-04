@@ -6,6 +6,5 @@ script:
   - export REPO=$DOCKER_USER/k8s-ha-ansible-docker
   - export TAG=latest
   - docker build -t gr0unz/k8s-ha-ansible-docker .
-  - docker tag $REPO:$COMMIT $REPO:$TAG
-  - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER
+  - docker tag gr0unz/k8s-ha-ansible-docker gr0unz/k8s-ha-ansible-docker:$TAG
   - docker push $REPO
